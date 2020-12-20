@@ -1,7 +1,16 @@
 import {Code, Flex, Heading, Stack, Table, Tbody, Td, Th, Thead, Tr, Text} from "@chakra-ui/react"
 
-function Info(data: any) {
-  const problemData = data.data;
+interface InfoProps {
+  data: {
+    title: string,
+    problem: string,
+    reference?: string,
+    examples: (string | boolean)[][]
+  }
+}
+
+function Info(props: InfoProps): React.ReactElement {
+  const problemData = props.data;
   
   return (
       <Stack spacing={2}>
@@ -20,7 +29,7 @@ function Info(data: any) {
             </Tr>
           </Thead>
           <Tbody>
-            {problemData.examples.map((example: any, index: number) => {
+            {problemData.examples.map((example: (string | boolean)[], index: number) => {
               return <Tr key={index}>
                 <Td>{example[0]}</Td>
                 <Td>{example[1].toString()}</Td>

@@ -1,12 +1,13 @@
 import React from 'react';
 import {Box, Button, Code, HStack, LightMode, Text, Textarea} from "@chakra-ui/react"
 
-function CodeInput() {
-  let [value, setValue] = React.useState("")
-  let [result, setResult] = React.useState("")
+function CodeInput(): React.ReactElement {
+  const [value, setValue] = React.useState<string>("")
+  const [result, setResult] = React.useState<string>("")
 
-  let runCode = (input: string) => {
+  const runCode = (input: string) => {
     try {
+      // eslint-disable-next-line
       setResult(eval(input));
     } catch (e) {
       console.error(e);

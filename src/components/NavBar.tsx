@@ -2,7 +2,7 @@ import React from 'react';
 import {Box, HStack, IconButton, Heading, LightMode, Spacer, useColorMode} from "@chakra-ui/react"
 import {MoonIcon, SunIcon} from "@chakra-ui/icons";
 
-function NavBar() {
+function NavBar(): React.ReactElement {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (

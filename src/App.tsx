@@ -1,12 +1,12 @@
 import React from 'react';
-import Problem from "./components/Problem";
 import NavBar from "./components/NavBar";
+import ProblemList from './containers/ProblemList';
 
-function App() {
+function App(): React.ReactElement {
   return (
     <>
       <NavBar />
-      <Problem />
+      <ProblemList />
     </>
   );
 }
