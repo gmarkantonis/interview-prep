@@ -1,4 +1,16 @@
-export const bank = [
+interface question {
+  title: string,
+  problem: string,
+  reference?: string,
+  examples: (string | boolean)[][],
+  tags: string[]
+}
+
+export function getQuestions(): question[] {
+  return bank;
+}
+
+const bank: question[] = [
   {
     title: "Valid Parenthesis",
     problem: "Given a string, return true if every open parenthesis '(' has a corresponding closed parenthesis ')'",
@@ -13,7 +25,8 @@ export const bank = [
       [`"())("`, false],
       [`")()"`, false],
       [`"))()"`, false]
-    ]
+    ],
+    tags: []
   },
   {
     title: "Reversing Carets",
@@ -21,7 +34,8 @@ export const bank = [
     examples: [
         [`"foo^bat^bar"`, `"footabbar"`],
         [`"^a^bcd^efgh^ijklm^nopqrs^tuvwxy^z^"`, `"zbcdsrqponijklmhgfetuvwxya"`]
-    ]
+    ],
+    tags: []
   },
   {
     title: "Spell Check",
@@ -36,6 +50,7 @@ export const bank = [
       [`"it"`, `["it", "bit"]`],
       [`""`, `[""]`],
     ],
+    tags: []
   },
   {
     title: "Telephone",
@@ -57,7 +72,8 @@ export const bank = [
         [`"a!"`, `NaN`],
         [`"000"`, `""`],
         [`""`, `""`],
-    ]
+    ],
+    tags: []
   },
   {
     title: "S Number",
@@ -67,7 +83,8 @@ export const bank = [
         [`9801`, `true`],
         [`8281`, `true`],
         [`6724`, `true`],
-    ]
+    ],
+    tags: []
   },
   {
     title: "Encoding",
@@ -79,7 +96,8 @@ export const bank = [
         [`"baaad"`, `"ba3d"`],
         [`"badbadbad"`, `"bad3"`],
         [`"badbeebad"`, `"badbeebad"`],
-    ]
+    ],
+    tags: []
   },
   {
     title: "Highest Number",
@@ -87,7 +105,8 @@ export const bank = [
     examples: [
         [`[7, 2, 6, 3]`, `7`],
         [`[]`, `0`]
-    ]
+    ],
+    tags: []
   },
   {
     title: "Word Wrap & Justify",
@@ -100,14 +119,16 @@ export const bank = [
         [`"justify", 25`, `["The-day-began-as-still-as", "the-----night----abruptly", "lighted---with--brilliant", "flame"]`],
         [`"wrap", 40`, `["The day began as still as the night", "abruptly lighted with brilliant flame"]`],
         [`"justify", 40`, `["The--day--began--as--still--as-the-night", "abruptly--lighted--with--brilliant-flame"]`],
-    ]
+    ],
+    tags: []
   },
   {
     title: "MinStack",
     problem: "Write a stack class with the following methods: push, pop, peek. Push adds to the top of the stack. Pop removes top item from stack and returns it. Peek inspects top item and returns it, but does not remove it. Implement a new method min, that returns the minimum item in the stack. The min method should be constant.",
     examples: [
         [`"minStack.min.pop()"`, `"???"`],
-    ]
+    ],
+    tags: []
   },
   {
     title: "Fibonacci Sequence",
@@ -123,6 +144,7 @@ export const bank = [
       [`"7"`, `"13"`],
       [`"15"`, `"610"`],
       [`"50"`, `"12586269025"`]
-    ]
+    ],
+    tags: []
   },
 ]
