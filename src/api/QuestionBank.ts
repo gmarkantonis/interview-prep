@@ -1,4 +1,16 @@
-export const bank = [
+interface question {
+  title: string,
+  problem: string,
+  reference?: string,
+  examples: (string | boolean)[][],
+  tags: string[]
+}
+
+export function getQuestions(): question[] {
+  return bank;
+}
+
+const bank: question[] = [
   {
     title: "Valid Parenthesis",
     problem: "Given a string, return true if every open parenthesis '(' has a corresponding closed parenthesis ')'",
